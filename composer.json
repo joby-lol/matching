@@ -1,0 +1,13 @@
+{
+    "name": "byjoby/matching",
+    "description": "Tools for solving various types of matching and assignment problems",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ByJoby\\Matching\\": "src"
+        }
+    }
+}
