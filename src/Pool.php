@@ -36,9 +36,7 @@ class Pool
     {
         $this->items = array_map(
             function (Item $item) {
-                $item = clone $item;
-                $item->pool($this);
-                return $item;
+                return clone $item;
             },
             $this->items
         );
@@ -60,10 +58,10 @@ class Pool
         if ($this->contains($item)) {
             return;
         }
-        $this->items[] = new Item($this, $item, $ranker);
+        $this->items[] = new Item($item, $ranker ?? $this->ranker);
     }
 
-    public function remove($item, $ranker = null)
+    public function remove($item)
     {
         if ($item instanceof Item) {
             $item = $item->item();

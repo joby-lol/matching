@@ -30,9 +30,10 @@ class DibsMatcher implements MatcherInterface
         array_map(
             function (Item $dibber) use (&$options, &$solution) {
                 $ranked = $dibber->ranker()->rank($options);
-                $top = reset($ranked);
-                $options->remove($top);
-                $solution->add($dibber, $top);
+                if ($top = reset($ranked)) {
+                    $options->remove($top);
+                    $solution->add($dibber, $top);
+                }
             },
             $this->left->items()
         );
