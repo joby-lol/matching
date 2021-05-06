@@ -28,9 +28,9 @@ $men->add('Carl');
 // effectively prefers the men in the order they appear in their Pool
 $women = new \ByJoby\Matching\Pool();
 // assign women to the pool the same way
-$men->add('Andrea');
-$men->add('Beatrice');
-$men->add('Carla');
+$women->add('Andrea');
+$women->add('Beatrice');
+$women->add('Carla');
 
 // pass the pools into a matcher object
 // by convention if an algorithm favors the preferences of
