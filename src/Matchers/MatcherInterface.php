@@ -1,4 +1,5 @@
 <?php
+/* Matching Algorithms | https://github.com/jobyone/matching | MIT License */
 
 namespace ByJoby\Matching\Matchers;
 
